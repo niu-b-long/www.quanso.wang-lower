@@ -10,8 +10,13 @@ class TPL
 	{
 		if (!$dir) {
 			$act = (!TPL::$tpl_key ? RUN_CONTROLLER : TPL::$tpl_key);
-			$dir = (is_array($GLOBALS['tpl'][$act]) ? TPL::$tpl_key : $GLOBALS['tpl'][$act]);
+			if($act == 'demo'){
+				$dir = 'demo/def';
+			}else{
+				$dir = (is_array($GLOBALS['tpl'][$act]) ? TPL::$tpl_key : $GLOBALS['tpl'][$act]);	
+			}
 		}
+
 
 		if (!defined('WEB_TPL_DIR')) {
 			define('WEB_TPL_DIR', TPL_DIR . '/' . $dir . TPL::$add_tpl_key_path);

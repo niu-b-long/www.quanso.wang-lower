@@ -7,7 +7,6 @@ final class APP
 		if (WWW_RZ_DIR != '5AF7EB75771ADAA391151EFE127C5588') {
 			exit('<h3>502 Bad Gateway</h3>');
 		}
-
 		APP::init();
 		APP::_format_rewrite();
 		APP::get_request();
@@ -246,29 +245,33 @@ final class APP
 	static private function controller($route)
 	{
 		$c = APP::format_rote($route);
+		//array(4) { [0]=> string(11) "admin/admin" [1]=> string(6) "admin/" [2]=> string(5) "admin" [3]=> string(14) "default_action" }
+		//把adv/替换为advertiser/
 		$c[1] = str_replace('adv/', 'advertiser/', $c[1]);
+		//aff/affiliate/
 		$c[1] = str_replace('aff/', 'affiliate/', $c[1]);
-		$dirs = preg_replace('/[^a-z0-9_\\/]+/i', '', $c[1]);
+		//把其中的数字替换为空
+		$dirs = preg_replace('/[^a-z0-9_\\/]+/i', '', $c[1]);//damin/
+		//进来没有登录的话为admin
 		$class_name = $c[2];
 		$fun = $c[3];
-		define('RUN_CONTROLLER_DIR', $dirs);
-		define('RUN_CONTROLLER', $dirs . $c[2]);
-		define('RUN_CONTROLLER_CLASS', $class_name);
-		define('RUN_ACTION', $fun);
+		define('RUN_CONTROLLER_DIR', $dirs);//admin
+		define('RUN_CONTROLLER', $dirs . $c[2]);//admin/admin
+		define('RUN_CONTROLLER_CLASS', $class_name);//admin
+		define('RUN_ACTION', $fun);//default_action
 		$file_path = APP_PATH . '/controller/' . $dirs . $class_name . '.ctl.php';
 
 		if (!is_file($file_path)) {
 			throw new Exception('Not ' . $class_name . ' controller');
 		}
-
-		APP::load_file($file_path);
-
+		APP::load_file($file_path);//引入要操作的类
+		//WWW_ARZ_DIR这个常量第一次进入后台文件会声明
 		if (RUN_CONTROLLER_DIR == 'admin/') {
 			if (WWW_ARZ_DIR != '006713EA795A324671690EDE7104E6FA') {
 				exit('<h3>502 Bad Gateway A</h3>');
 			}
 		}
-
+		//CUSTOM_APP_DIR	不知道什么时候会存在
 		if (defined('CUSTOM_APP_DIR')) {
 			$z_class_name = 'z_' . $class_name;
 			if (!class_exists($z_class_name) && file_exists($file_path = CUSTOM_APP_DIR . '/controller/' . $dirs . $class_name . '.ctl.php')) {
@@ -276,15 +279,14 @@ final class APP
 				$class_name = $z_class_name;
 			}
 		}
-
 		$class_name = $class_name . '_ctl';
-
+		//判断类是否存在
 		if (!class_exists($class_name)) {
 			throw new Exception('Class Error ' . $class_name);
 		}
 
 		$obj = new $class_name();
-
+		////判断类里面的方法是否存在
 		if (method_exists($obj, $fun)) {
 			$ret = $obj->$fun();
 		}

@@ -1,0 +1,54 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+input,button,select,textarea{outline:none}
+ol, ul {list-style:none}
+img,hr{border:none}
+textarea{resize:none}
+body,input,textarea{font: normal 100%;font-family:'微软雅黑','黑体',Verdana,Arial;}
+a{text-decoration:none;outline:none; }
+.clear{clear:both}
+body{overflow-x:hidden;background:#eff1f2;}
+.subbanner_help {
+    background: #3b3d43 url(navbanner03.jpg) no-repeat center top; margin-top:80px;
+}
+
+.subbanner {
+    height: 205px;
+}
+
+/*头*/
+.fanhui{margin-top:45px;}
+
+.fanhui a{ font-size:18px;color:#ff6445;padding: 6px 34px;border: solid 2px;
+border-radius: 40px;}
+.fanhui a img{margin-right:6px;    margin-bottom: 3px;}
+			
+	
+/*内容*/	
+.panel{border-radius:10px; position:relative;}
+.panel-primary{ border:0;}
+.btn-primary{border:0;}
+.ljzc{color:#4fc0e8;}
+.panel-body img{ position:absolute;left:50%;margin-left:-43px;top:-43px;}
+.about-bg{width:100%;height:700px;}
+#login{margin-top:66px;-moz-box-shadow:0px 1px 6px rgba(0,0,0,0.3); -webkit-box-shadow:0px 1px 6px rgba(0,0,0,0.3); box-shadow:0px 1px 6px rgba(0,0,0,0.3);}
+.denglu{padding-left:110px;padding-right:110px;margin-top:-72px;}
+
+@media (max-width: 1600px) {
+	.denglu{padding-left:0px;padding-right:0px;}
+	}
+
+#login .panel-body{ padding:15px 0 15px 0;}
+#login label{ font-size:18px;color:#545d66; font-weight:500;margin-bottom:18px;} 
+#login label span{color:#ff0000;}
+#login .one{margin-bottom:26px;}  
+#login .form-control{height:54px;}
+#login .shuru{margin-top:60px;margin-bottom:0}
+.jizhumima{margin-bottom:8px;margin-top:12px}
+#dl-btn{ font-size:20px; background:#ff6445; font-weight:500;padding: 12px 12px;-moz-box-shadow:0px 1px 4px #cacbcc; -webkit-box-shadow:0px 1px 4px #cacbcc; box-shadow:0px 1px 4px #cacbcc;}
+#login .panel-body p{ font-size:18px;color:#4fc0e8;text-decoration: underline; margin-bottom:10px;}
+
+.footer-bottom p{color:#7a8795; line-height:60px; margin-top:32px; position:relative;bottom:0}
