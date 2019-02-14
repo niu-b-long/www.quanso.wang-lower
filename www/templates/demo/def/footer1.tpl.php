@@ -31,7 +31,7 @@
 	</div>
 </div>
 
-<script src="/images/jquery-1.8.3.min.js"></script>
+<script src="<?php echo SRC_TPL_DIR?>/images/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
 $(function(){
         var $banner=$('.banner');
@@ -129,7 +129,7 @@ $(function(){
                 });
 });
 </script>
-<script src="/images/jquery.fullPage.js"></script>
+<script src="<?php echo SRC_TPL_DIR?>/images/jquery.fullPage.js"></script>
 <script>
 $(function(){
 	var $mlNav = $('#aa');
