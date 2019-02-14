@@ -274,11 +274,11 @@ class demo_ctl extends appController
 		// 	redirect('index.msg?key=checkcode');
 		// }
 
-		//$count_24_reg = dr('index/user.get_24_regtime', get_ip());
-
-		//if ($count_24_reg == $GLOBALS['C_ZYIIS']['24_hours_register_num']) {
-			//redirect('index.msg?key=register_24_repeat');
-		//}
+		$count_24_reg = dr('index/user.get_24_regtime', get_ip());
+		//$GLOBALS在config.php和www/settimg.php里面有声明
+		if ($count_24_reg >= $GLOBALS['C_ZYIIS']['24_hours_register_num']) {
+			redirect('index.msg?key=register_24_repeat');
+		}
 
 		$u = dr('index/user.get_username_one', $username);
 

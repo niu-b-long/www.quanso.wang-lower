@@ -278,6 +278,10 @@ echo '">token管理</a></p>' . "\r\n" . '        <p ';
 echo '><a href="';
 echo url('admin/tongji.get_list');
 echo '">系数管理</a></p>' . "\r\n" .'        <p ';
+
+echo '><a href="';
+echo url('admin/domain.get_list');
+echo '">域名管理</a></p>' . "\r\n" .'        <p ';
 echo '></div></div>';
 // echo '><a href="';
 // echo url('admin/loginlog.get_list');

@@ -9,15 +9,15 @@ class class_mod extends app_models
 		if ($type) {
 			$this->where('type', (int) $type);
 		}
-
-		$this->order_by('classid');
+		$this->pager();
+		$this->order_by('classid','down Desc');
 		$data = $this->get();
 		return $data;
 	}
 
 	public function add_post()
 	{
-		$data = array('classname' => post('classname'));
+		$data = array('classname' => post('classname'),'type' => post('type'));
 		$this->set($data);
 		$this->insert();
 		return true;
@@ -46,7 +46,7 @@ class class_mod extends app_models
 			$this->where('type', (int) $type);
 		}
 
-		$this->order_by('classid');
+		$this->order_by('classid','down Desc');
 		$data = $this->get();
 		return $data;
 	}

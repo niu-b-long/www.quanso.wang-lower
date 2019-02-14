@@ -19,7 +19,7 @@ define ( 'APP_REWRITE',  0);
 
 require WWW_DIR . '/settings.php';
 
-
+//全局变量$GLOBALS声明的地方  还有在www/settings.php里面有声明$GLOBALS['C_ZYIIS']
 $GLOBALS ['mysql'] = array (
 		'dbhost' => 'localhost',
 		'dbport' => '3306',

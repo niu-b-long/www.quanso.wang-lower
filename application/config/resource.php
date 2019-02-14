@@ -34,7 +34,8 @@ $resource = array(
 	'广告模式'       => array('controller' => 'adtpl', 'action' => 'get_list,add_post,update_post,del,lock,unlock'),
 	'广告样式'       => array('controller' => 'adstyle', 'action' => 'get_list,add_post,update_post,del,lock,unlock'),
 	'广告尺寸'       => array('controller' => 'specs', 'action' => 'get_list,add_post,update_post,del'),
-  	'数据统计'       => array('controller' => 'tongji', 'action' => 'get_list,add_post,update_post,del,update_xi,get_list_token,add_post_token,update_post_token,lock,search,del_coef,unlock_coef,lock_coef')
+  	'数据统计'       => array('controller' => 'tongji', 'action' => 'get_list,add_post,update_post,del,update_xi,get_list_token,add_post_token,update_post_token,lock,search,del_coef,unlock_coef,lock_coef'),
+  	'域名管理'			 => array('controller' =>'domain','action' => 'get_list,add_post,update_post,del')
 	);
 $ac = array('add_post' => '新建', 'update_post' => '编辑', 'del' => '删除', 'get_list' => '查看列表', 'lock' => '锁定', 'unlock' => '激活审批', 'delivery' => '发货', 'truncate' => '清空', 'affiliate_list' => '站长管理', 'advertiser_list' => '广告商管理', 'commercial_list' => '商务管理', 'service_list' => '客服管理', 'post_payment' => '财务结算', 'post_add_pay' => '手动充值', 'plan_list' => '计划报表', 'user_list' => '站长报表', 'ads_list' => '广告报表', 'zone_list' => '广告位报表', 'get_os' => '操作系统', 'get_browser' => '浏览器', 'get_screen' => '分辨率', 'get_isp' => '网络提供商', 'get_city' => '地域分布', 'revocation' => '撤销', 'get_alexapr' => '获取Alexa', 'add_pay' => '手动充值', 'implant_zone' => '植入到广告位', 'down_execl' => '导出EXECL', 'update_money' => '更新余额', 'update_deduction' => '更新扣量', 'update_group' => '更新分组','update_ping' => '更新平台','update_class' => '更新类型', 'update_price' => '更新单价','update_xi' =>'统计添加','get_list_token' =>'查看token','add_post_token' => '添加token','update_post_token' => '修改token','search' => '搜索','del_coef' => '删除系数','lock_coef' => '系数锁定','unlock_coef' => '系数激活');
 

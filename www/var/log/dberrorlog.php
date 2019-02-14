@@ -484,3 +484,11 @@ Time: 2019-2-13 1:51am
 Error:  Access denied for user 'www_quanso_wang'@'localhost' (using password: YES)
 Errno:  1045
 Script: /www.quanso.wang/www/index.php
+
+<?PHP exit('------------------Www.Zyiis.Com------------------'); ?>
+ZYADS: MySQL query sql error 
+Time: 2019-2-14 6:22am
+Error:  Unknown column 'classname' in 'field list'
+Errno:  1054
+Script: /smoothly/index.php
+SQL: INSERT INTO zyads_addomain (classname, type) VALUES ('9', '')
