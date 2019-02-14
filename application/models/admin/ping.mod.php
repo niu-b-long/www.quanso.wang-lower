@@ -6,6 +6,7 @@ class ping_mod extends app_models
 
 	public function get_list()
 	{
+		$this->order_by('pingid','down Desc');
 		$data = $this->get();
 		return $data;
 	}
@@ -37,6 +38,7 @@ class ping_mod extends app_models
 
 	public function get_all()
 	{
+		$this->order_by('pingid','down Desc');
 		$data = $this->get();
 		return $data;
 	}

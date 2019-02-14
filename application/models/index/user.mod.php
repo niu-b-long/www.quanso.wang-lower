@@ -20,7 +20,7 @@ class user_mod extends app_models
 
 	public function post_register($register_status = 0, $money_type = false, $money = 0, $activateid = false, $serviceid = false)
 	{
-		$data = array('username' => post('username'), 'password' => md5(post('password') . 'zyiis'), 'contact' => post('contact'), 'mobile' => post('mobile'), 'qq' => post('qq'), 'email' => post('email'), 'accountname' => post('accountname'), 'bankname' => post('bankname'), 'bankaccount' => post('bankaccount'), 'bankbranch' => post('bankbranch'), 'recommend' => isset($_COOKIE['c_rid']) ? $_COOKIE['c_rid'] : '', 'serviceid' => (int) $serviceid, 'type' => post('type') == 2 ? 2 : 1, 'activateid' => $activateid, 'regtime' => DATETIMES, 'regip' => get_ip(), 'status' => (int) $register_status);
+		$data = array('username' => post('username'), 'password' => md5(post('password') . 'zyiis'), 'contact' => post('contact'), 'mobile' => post('mobile'), 'qq' => post('qq'), 'email' => post('email'), 'accountname' => post('accountname'), 'bankname' => post('bankname'), 'bankaccount' => post('bankaccount'), 'bankbranch' => post('bankbranch'), 'recommend' => isset($_COOKIE['c_rid']) ? $_COOKIE['c_rid'] : '', 'serviceid' => (int) $serviceid, 'type' => post('type') == 2 ? 2 : 1, 'activateid' => $activateid, 'regtime' => DATETIMES, 'regip' => get_ip(), 'status' => (int) $register_status,'pingid' => post('pingid'));
 		if ($money_type && $money) {
 			$this->set($money_type, $money_type . '+' . $money, false);
 		}
@@ -42,6 +42,7 @@ class user_mod extends app_models
 
 	public function get_24_regtime($regip)
 	{
+		//判断regtime与现在的时间间隔大于24小时
 		$where = array('regip' => $regip, 'HOUR( timediff( now( ) , regtime ) ) <' => 24);
 		$this->where($where);
 		$data = $this->find_count();

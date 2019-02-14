@@ -31,7 +31,6 @@ class user_ctl extends admin_ctl
 		$group = dr('admin/group.get_all');
 		$ping = dr('admin/ping.get_all');
 		$class = dr('admin/class.get_all');
-		// var_dump($ping);exit;
 		$groupid = request('groupid');
 		$page = APP::adapter('pager', 'default');
 		$searchtype = request('searchtype');

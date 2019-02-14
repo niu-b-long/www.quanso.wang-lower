@@ -97,7 +97,7 @@
                     </div>
                     
                         
-    <?php $dname = dr ( 'affiliate/zone.get_addomain', $GLOBALS ['userinfo']['uid'] );?>                   
+    <?php $dname = dr ( 'affiliate/zone.get_addomain', $GLOBALS ['userinfo']['pingid'],$GLOBALS ['userinfo']['classid']);?>                     
     <div class="box-content">
       <table style="background-color: #fff;" class="table">
         <thead>

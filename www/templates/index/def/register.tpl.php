@@ -59,6 +59,7 @@
     <tr>
       <td><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0" class="input_1">
           <tr>
+            <input type="hidden" name="pingid" value="2">
             <td width="180"><font color="#FF0000">*</font>用户名称</td>
             <td><input type="text" name="username" id="username_ajax" class="input_text" /></td>
           </tr>

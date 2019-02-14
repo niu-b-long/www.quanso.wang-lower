@@ -85,11 +85,11 @@ class zone_mod extends app_models
 		$data = $this->find_one();
 		return $data;
 	}
-  	public function get_addomain($id)
+  	public function get_addomain($pingid,$classid)
 	{
-      	$typeid = $this->get_user_one($id);
+      	//$typeid = $this->get_user_one($id);
       	$this->from('addomain');
-		$where = array('groupid' => (int) $typeid);
+		$where = array('pingid' => (int) $pingid,'classid' => (int) $classid);
 		$this->where($where);
 		$data = $this->find_one();
 		return $data;
