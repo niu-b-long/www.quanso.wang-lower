@@ -2,7 +2,11 @@
 
 header('Content-type:text/html;charset=utf-8');
 define('SESSION_ADP', 'db');
-define('DEFAULT_CONTROLLER', 'index');
+if(DEMOINIT == '123456789'){
+	define('DEFAULT_CONTROLLER', 'demo');
+}else{
+	define('DEFAULT_CONTROLLER', 'index');	
+}
 define('DEFAULT_ACTION', 'default_action');
 define('DEFAULT_ENTRANCE_FILE', 'index.php');
 define('DEFAULT_PARAM', 'e');

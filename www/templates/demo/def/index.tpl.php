@@ -2,8 +2,8 @@
 <html lang="zh-CN" class="fp-enabled" style="overflow: hidden; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <title>首页-<?php echo $GLOBALS['C_ZYIIS']['sitename']?></title>
-<link rel="stylesheet" type="text/css" href="/images/jquery.fullPage.css">
-<link rel="stylesheet" type="text/css" href="/images/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SRC_TPL_DIR?>/images/jquery.fullPage.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SRC_TPL_DIR?>/images/style.css">
 
 </head>
 
@@ -14,7 +14,7 @@ TPL::display('header'); ?>
 <div id="dowebok" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px);">
 
 	<div class="section section1 active fp-section" data-anchor="page1" style="height: 612px;">
-		<div class="bg"><img src="/images/section1.jpg" alt=""></div>
+		<div class="bg"><img src="<?php echo SRC_TPL_DIR?>/images/section1.jpg" alt=""></div>
         <div class="bg12"></div>
         <div class="bg13">
              
@@ -24,12 +24,12 @@ TPL::display('header'); ?>
                     <a href="javascript:;" class="nextBtn"><i></i></a>
                 </div>-->
                 <ul class="banner-img" style="width: 1224px; left: -996.592px;">
-                    <li><a href="javascript:void(0)"><img src="/images/1.jpg"></a></li>
-                    <li><a href="javascript:void(0)"><img src="/images/2.jpg"></a></li>
-                    <li><a href="javascript:void(0)"><img src="/images/3.jpg"></a></li>
-                    <li><a href="javascript:void(0)"><img src="/images/4.jpg"></a></li>
-                    <li><a href="javascript:void(0)"><img src="/images/5.jpg"></a></li>
-                    <li><a href="javascript:void(0)"><img src="/images/6.jpg"></a></li>
+                    <li><a href="javascript:void(0)"><img src="<?php echo SRC_TPL_DIR?>/images/1.jpg"></a></li>
+                    <li><a href="javascript:void(0)"><img src="<?php echo SRC_TPL_DIR?>/images/2.jpg"></a></li>
+                    <li><a href="javascript:void(0)"><img src="<?php echo SRC_TPL_DIR?>/images/3.jpg"></a></li>
+                    <li><a href="javascript:void(0)"><img src="<?php echo SRC_TPL_DIR?>/images/4.jpg"></a></li>
+                    <li><a href="javascript:void(0)"><img src="<?php echo SRC_TPL_DIR?>/images/5.jpg"></a></li>
+                    <li><a href="javascript:void(0)"><img src="<?php echo SRC_TPL_DIR?>/images/6.jpg"></a></li>
                 </ul>
                 <ul class="banner-circle" style="margin-left: -39px;"><li class="" href="#"><a></a></li><li class=""><a href="javascript:void(0)"></a></li><li class=""><a href="javascript:void(0)"></a></li><li class=""><a href="javascript:void(0)"></a></li><li class=""><a href="javascript:void(0)"></a></li><li class="selected"><a href="javascript:void(0)"></a></li></ul>
             </div>
@@ -42,7 +42,7 @@ TPL::display('header'); ?>
 	</div>
 
 	<div class="section section2 fp-section" data-anchor="page2" style="height: 612px;">
-        <div class="bg"><img src="/images/section2.jpg" alt=""></div>
+        <div class="bg"><img src="<?php echo SRC_TPL_DIR?>/images/section2.jpg" alt=""></div>
         <div class="bg21"></div>
         <div class="bg22"></div>
         <div class="bg23"></div>

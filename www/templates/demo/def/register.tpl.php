@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>注册_<?php echo $GLOBALS['C_ZYIIS']['sitename']?></title>
-<link rel="stylesheet" type="text/css" href="/images/jquery.fullPage.css">
-<link rel="stylesheet" type="text/css" href="/images/style.css">
-<link rel="stylesheet" href="/images/style2.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SRC_TPL_DIR?>/images/jquery.fullPage.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SRC_TPL_DIR?>/images/style.css">
+<link rel="stylesheet" href="<?php echo SRC_TPL_DIR?>/images/style2.css">
 
 <style>
   .tip{font:bold 14px/2.5 'microsoft yahei';}
@@ -67,9 +67,9 @@ h1 strong{font:bold 16px/2 'microsoft yahei';color: #000}
 <body style="overflow-y:scroll; margin-top:0">
 <?php if(!defined('IN_ZYADS')) exit(); 
 TPL::display('header'); ?>
-<script type="text/javascript" src="/images/jquery-1.7.min.js"></script>
-    <script type="text/javascript" src="/images/jquery.validate.js"></script>
-    <script type="text/javascript" src="/images/additional-methods.js"></script>
+<script type="text/javascript" src="<?php echo SRC_TPL_DIR?>/images/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="<?php echo SRC_TPL_DIR?>/images/jquery.validate.js"></script>
+    <script type="text/javascript" src="<?php echo SRC_TPL_DIR?>/images/additional-methods.js"></script>
 	<div class="subbanner subbanner_register">
     <div class="wrapper">
         <div class="sub_obj_a cd-headline letters scale">
@@ -206,7 +206,7 @@ TPL::display('header'); ?>
                                    <?php foreach($serviceuser AS $s){?>
                    <li>
                      <input style="transform: scale(1.5,1.5);" name="serviceid" type="radio" value="<?php echo $s['uid']?>"   />
-                     <span><?php echo $s['contact']?></span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $s['qq']?>&site=qq&menu=yes" style="padding-left:1px;"><img src="<?php echo SRC_TPL_DIR;?>/images/qqonline.gif" alt="点击这里给我发消息" border="0" align="absmiddle" title="点击这里给我发消息" /></a></li>
+                     <span><?php echo $s['contact']?></span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $s['qq']?>&site=qq&menu=yes" style="padding-left:1px;"><img src="<?php echo SRC_TPL_DIR;?><?php echo SRC_TPL_DIR?>/images/qqonline.gif" alt="点击这里给我发消息" border="0" align="absmiddle" title="点击这里给我发消息" /></a></li>
                   <?php }?>
                                   </ul></td>
             </tr>
@@ -226,7 +226,7 @@ TPL::display('header'); ?>
                                   <?php foreach($commercialuser AS $s){?>
                    <li>
                     <input style="transform: scale(1.5,1.5);" name="serviceid" type="radio" value="<?php echo $s['uid']?>"   />
-                     <span><?php echo $s['contact']?></span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $s['qq']?>&site=qq&menu=yes" style="padding-left:1px;"><img src="<?php echo SRC_TPL_DIR;?>/images/qqonline.gif" alt="点击这里给我发消息" border="0" align="absmiddle" title="点击这里给我发消息" /></a></span></li>
+                     <span><?php echo $s['contact']?></span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $s['qq']?>&site=qq&menu=yes" style="padding-left:1px;"><img src="<?php echo SRC_TPL_DIR;?><?php echo SRC_TPL_DIR?>/images/qqonline.gif" alt="点击这里给我发消息" border="0" align="absmiddle" title="点击这里给我发消息" /></a></span></li>
                   <?php }?>
                                   </ul></td>
             </tr>

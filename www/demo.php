@@ -9,9 +9,9 @@ if ($installs) {
 	header('Location: ./install/index.php');
 	exit();
 }
-
-require_once '../config.php';
-require_once './init.php';
+define('DEMOINIT','123456789');
+require_once './config.php';
+require_once '../library/init.php';
 APP::run();
 
 ?>

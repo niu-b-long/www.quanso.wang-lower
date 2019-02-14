@@ -1,6 +1,6 @@
 <div id="menu">
   <div class="container">
-    <div class="logo"><a href=""><img src="/images/logo.png" alt="亿玛互动推"></a></div>
+    <div class="logo"><a href=""><img src="<?php echo SRC_TPL_DIR?>/images/logo.png" alt="亿玛互动推"></a></div>
     <ul class="nav-bar">
       <li data-menuanchor="page1" class="active"><a href="/index.php?e=demo.default_action">首页</a></li>
       <li data-menuanchor="page2"><a href="/index.php?e=demo.default_action#page2">投放优势</a></li>

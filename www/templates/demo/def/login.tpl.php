@@ -3,10 +3,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="/images/jquery.fullPage.css">
-<link rel="stylesheet" type="text/css" href="/images/style.css">
-<link href="/images/style_login.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/images/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SRC_TPL_DIR?>/images/jquery.fullPage.css">
+<link rel="stylesheet" type="text/css" href="<?php echo SRC_TPL_DIR?>/images/style.css">
+<link href="<?php echo SRC_TPL_DIR?>/images/style_login.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="<?php echo SRC_TPL_DIR?>/images/bootstrap.min.css">
 <title>会员登陆—<?php echo $GLOBALS['C_ZYIIS']['sitename']?></title>
 </head>
 
@@ -36,7 +36,7 @@ TPL::display('header'); ?>
     <div id="login" class="panel panel-primary">
     <form id="form1" name="form1" method="post" action="<?php echo url("demo.postlogin")?>" onSubmit="return doLogin()">
         <div class="panel-body">
-          <img src="/images/foot-logo02.png">
+          <img src="<?php echo SRC_TPL_DIR?>/images/foot-logo02.png">
           <div class="form-group col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1 shuru">
                 <label><span>●&nbsp;</span>用户名:</label>
                 <div style="color: red; font-size: 12px; " id="txt_username_tip"></div>
